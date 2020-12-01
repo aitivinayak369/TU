@@ -34,7 +34,7 @@ app.post('/shorten',(req,res)=>{
  URLModel.findOne({URL:req.body.url}).then((doc)=>{
   if(doc)
   {
-    res.json({shortURL:"https://dry-lowlands-42525.herokuapp.com/"+doc.code})
+    res.json({shortURL:"http://localhost:3000/"+doc.code})
   }
   else{
     let code;
@@ -49,7 +49,7 @@ app.post('/shorten',(req,res)=>{
     generatedCodes.push(code)
     new URLModel({code:code,URL:req.body.url.trim()}).save().then(()=>{
       console.log("saved doc sucessfully!")
-      res.json({shortURL:"https://dry-lowlands-42525.herokuapp.com/"+code})
+      res.json({shortURL:"http://localhost:3000/"+code})
     }).catch((err)=>{
       console.log(err)
     })
