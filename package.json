@@ -6,13 +6,12 @@
   "license": "MIT",
   "scripts": {
     "build:dev": "webpack",
-    "build:prod": "webpack  --env production",
+    "build:prod": "webpack --mode production  --env production",
     "dev-server": "webpack serve",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
     "start": "node server/server.js"
-   
   },
-  "engines":{
+  "engines": {
     "node": "10.16.3"
   },
   "dependencies": {
@@ -28,6 +27,7 @@
     "css-loader": "*",
     "express": "*",
     "extract-text-webpack-plugin": "*",
+    "mdbreact": "^5.0.0",
     "mongoose": "^5.10.18",
     "node-sass": "*",
     "react": "*",
