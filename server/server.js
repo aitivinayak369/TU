@@ -122,7 +122,7 @@ app.get("/:code",(req,res)=>{
 app.get('/URLsData/:pageNumber',(req,res)=>{
 
 
-        URLModel.find({}).sort({count:"desc"}).skip((req.params.pageNumber-1)*10).limit(50).then((data)=>{
+        URLModel.find({}).sort({count:"desc"}).skip((req.params.pageNumber-1)*2).limit(2).then((data)=>{
           res.json(data)
         }).catch((err)=>{
           res.status(400)
