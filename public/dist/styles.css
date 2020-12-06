@@ -9,7 +9,7 @@
     color: blue;
 }
 
-body{
+#body{
     font-family: 'Exo', sans-serif;
     margin: 0px;
     padding: 0px;
@@ -30,7 +30,7 @@ body{
 
 
 
-body{
+#body{
  
  
     background: #4e54c8;  
