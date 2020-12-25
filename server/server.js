@@ -13,7 +13,7 @@ bcrypt.genSalt(10,function(err,salt){
     console.log(hash);
   })
 })
-mongoose.connect('mongodb+srv://vinayak:vinayak123@cluster0.7eax6.mongodb.net/Cluster0?retryWrites=true&w=majority',
+mongoose.connect('',
 {useNewUrlParser: true, useUnifiedTopology: true}).
 then(()=>{
   console.log("sucesss")
